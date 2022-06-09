@@ -1,6 +1,6 @@
 # Tree Viewer
 
-**KansasStateUniversity.TreeViewer2** is a library of tools for viewing and manipulating trees under the Microsoft® .NET Framework. It includes classes that can be used within code to display trees. 
+**KansasStateUniversity.TreeViewer2** is a library of tools for viewing and manipulating trees under the Microsoft® .NET Framework. It includes classes that can be used within code to display trees. This is a port of a portion of a [Java<sup>TM</sup> Tree Viewer](https://github.com/RodHowell-Algorithms/Tree-Viewer).
 
 ## Usage
 
