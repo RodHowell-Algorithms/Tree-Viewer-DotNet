@@ -1,0 +1,614 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KansasStateUniversity.TreeViewer2</name>
+    </assembly>
+    <members>
+        <member name="T:KansasStateUniversity.TreeViewer2.IColorizer">
+            <summary>
+            An interface to encapsulate a mechanism for associating colors to
+            objects.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.IColorizer.GetColor(System.Object)">
+            <summary>
+            Returns the <c>Color</c> associated with the given object.
+            </summary>
+            <param name="obj">The object to color.</param>
+            <returns>
+            The <c>Color</c> associated with the given object.
+            </returns>
+        </member>
+        <member name="T:KansasStateUniversity.TreeViewer2.ITree">
+            <summary>
+            This interface may be implemented by a tree in order to allow a
+            <c>TreeDrawing</c> to be constructed from the tree.  
+            </summary>
+            <remarks>
+            Empty trees may be
+            represented either by <c>null</c> references or by objects whose
+            <c>IsEmpty</c> properties are true.  If <c>null</c> references
+            are used, <c>IsEmpty</c> should always be <c>false</c>.
+            </remarks>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.ITree.Root">
+            <summary>
+            Gets the root of the tree.  
+            </summary>
+            <remarks>
+            The <c>TreeDrawing</c> class
+            converts the returned object to a <c>String</c>.  In
+            order to control how this conversion is done, its <c>ToString()</c>
+            method may be overridden.
+            <see cref="M:System.Object.ToString"/>
+            </remarks>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.ITree.Children">
+            <summary>
+            Gets the children of the tree.  
+            </summary>
+            <remarks>
+            A <c>null</c> returned value
+            is treated as equivalent to an array of length 0.
+            </remarks>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.ITree.IsEmpty">
+            <summary>
+            Gets a boolean indicating whether the tree is empty.
+            </summary>
+        </member>
+        <member name="T:KansasStateUniversity.TreeViewer2.NamespaceDoc">
+            <summary>
+            KansasStateUniversity.TreeViewer2 is a library for building visualizations of trees.
+            </summary>
+            <remarks>
+            This library is a revision of KansasStateUniversity.TreeViewer, which contained some members
+            that were not consistent with the .NET style. A developer may define a tree structure which 
+            implements <c>ITree</c>. If colored nodes are desired, a class implementing <c>IColorizer</c>
+            may also be defined. A drawing of the tree can then be created using the <c>TreeDrawing</c>, 
+            <c>ScrollingTreePanel</c>, and/or <c>TreeForm</c> classes.
+            </remarks>
+        </member>
+        <member name="T:KansasStateUniversity.TreeViewer2.ScrollingTreePanel">
+            <summary>
+            A graphical component displaying a representation of a tree with scroll bars.
+            </summary>
+            <remarks>
+            A <c>ScrollingTreePanel</c> can be constructed quickly from a
+            <c>TreeDrawing</c>.  Because this
+            component should not have children, no children are rendered, even if
+            they are added.  The colors of the contents of the nodes are determined by the
+            underlying <c>TreeDrawing</c>.  The colors of the lines and boxes are determined
+            by the foreground color.  Currently, both scroll bars are always shown - 
+            a later version may make them appear when needed.  The underlying <c>TreeDrawing</c>
+            can be replaced dynamically using the <c>Drawing</c> property.
+            </remarks>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.ScrollingTreePanel._scrollOverlap">
+            <summary>
+            The number of pixels to retain from the previous view when doing a large scroll.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.ScrollingTreePanel._minLargeScroll">
+            <summary>
+            The minimum value of a large scroll.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.#ctor">
+            <summary>
+            Constructs a ScrollingTreePanel with an empty tree and default font.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.#ctor(KansasStateUniversity.TreeViewer2.TreeDrawing)">
+            <summary>
+            Constructs a <c>ScrollingTreePanel</c> with the given tree and default font.
+            </summary>
+            <param name="t">The tree to display.</param>
+            <exception cref="T:System.NullReferenceException">If t is null.</exception>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.#ctor(KansasStateUniversity.TreeViewer2.TreeDrawing,System.Drawing.Font)">
+            <summary>
+            Constructs a <c>ScrollingTreePanel</c> with the given tree using the given font.
+            </summary>
+            <param name="t">The tree to display.</param>
+            <param name="f">The font to use to display the tree.</param>
+            <exception cref="T:System.NullReferenceException">If t is null.</exception>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.ScrollingTreePanel_ForeColorChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the event signaled when this <c>ScrollingTreePanel</c>'s foreground color
+            is changed.
+            </summary>
+            <param name="sender">The object whose foreground color was changed.</param>
+            <param name="e">The event arguments (unused).</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.uxTree_DrawingSizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the event signaled when the underlying <c>TreePanel</c>'s associated
+            <c>TreeDrawing</c> is changed.
+            </summary>
+            <param name="sender">The object whose <c>TreeDrawing</c> was changed.</param>
+            <param name="e">The event arguments (unused).</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.ScrollingTreePanel_FontChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the event signaled when this <c>ScrollingTreePanel</c>'s <c>Font</c>
+            is changed.
+            </summary>
+            <param name="sender">The object whose <c>Font</c> was changed.</param>
+            <param name="e">The event arguments (unused).</param>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.Drawing">
+            <summary>
+            Gets or sets the <c>TreeDrawing</c> being shown.
+            </summary>
+            <exception cref="T:System.NullReferenceException">If given a null <c>TreeDrawing</c>.</exception>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.SetScrollBarMax">
+            <summary>
+            Sets the maximum values of the scroll bars and ensures that the view is
+            scrolled to within the rectangle bounding the tree.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.uxHorizontalScrollBar_Scroll(System.Object,System.Windows.Forms.ScrollEventArgs)">
+            <summary>
+            Handles the event signaled when the horizontal scrollbar is scrolled.
+            </summary>
+            <param name="sender">The object that was scrolled.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.uxVerticalScrollBar_Scroll(System.Object,System.Windows.Forms.ScrollEventArgs)">
+            <summary>
+            Handles the event signaled when the vertical scrollbar is scrolled.
+            </summary>
+            <param name="sender">The object that was scrolled.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.DoScroll">
+            <summary>
+            Scrolls the view to match the scroll bars.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.uxTree_SizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the event signaled when the size of the underlying <c>TreePanel</c>
+            is changed.
+            </summary>
+            <param name="sender">The object whose size was changed.</param>
+            <param name="e">The event arguments (unused).</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.SetScrollBarChange">
+            <summary>
+            Adjusts the large change of the scroll bars to be consistent with the size of the view.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.ScrollingTreePanel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:KansasStateUniversity.TreeViewer2.TreePanel">
+            <summary>
+            A graphical component displaying a representation of a tree, or some portion of that
+            representation.
+            </summary>
+            <remarks>
+            This class has been retained as a public class for backwards compatibility -
+            <c>ScrollingTreePanel</c> is preferred.  Specifically, system limitations restrict
+            the size of a tree that can be shown by using auto-scrolling with instances of this
+            class.
+            <para>
+            A <c>TreePanel</c> can be constructed quickly from a
+            <c>TreeDrawing</c>.  Because this
+            component should not have children, no children are rendered, even if
+            they are added.  The colors of the contents of the nodes are determined by the
+            underlying <c>TreeDrawing</c>.  The colors of the lines and rectangles are
+            determined by the foreground color.  Capability to scroll the view programmatically
+            is provided via the <c>ScrollTo</c> method.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreePanel._tree">
+            <summary>
+            The object containing the description of the tree.
+            </summary>
+        </member>
+        <member name="E:KansasStateUniversity.TreeViewer2.TreePanel.DrawingSizeChanged">
+            <summary>
+            An event indicating that the size of the visual representation of the tree
+            has changed.
+            </summary>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreePanel.Drawing">
+            <summary>
+            Gets or sets the <c>TreeDrawing</c> being displayed.
+            </summary>
+            <exception cref="T:System.NullReferenceException">If given a null TreeDrawing.</exception>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreePanel.Font">
+            <summary>
+            Gets or sets the Font used to display the contents of the nodes.
+            </summary>
+            <exception cref="T:System.NullReferenceException">If given a null Font.</exception>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreePanel._drawingSize">
+            <summary>
+            The size of the associated <c>TreeDrawing</c>.
+            </summary>
+            <remarks>
+            The <c>SetDrawingSize</c> method is used to set this value in order to ensure that
+            a <c>DrawingSizeChanged</c> event is signaled.
+            </remarks>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreePanel.DrawingWidth">
+            <summary>
+            Gets the width in pixels of the tree being displayed.
+            </summary>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreePanel.DrawingHeight">
+            <summary>
+            Gets the height in pixels of the tree being displayed.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreePanel._format">
+            <summary>
+            Controls the alignment of node labels within their boxes.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreePanel._defaultFont">
+            <summary>
+            The default <c>Font</c>.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreePanel._horizontalOffset">
+            <summary>
+            The distance from the left edge of the drawing to the left edge of the Panel.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreePanel._verticalOffset">
+            <summary>
+            The distance from the top edge of the drawing to the top edge of the Panel.
+            </summary>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreePanel.DefaultFont">
+            <summary>
+            Gets the default <c>Font</c>.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreePanel.StandardCharacter">
+            <summary>
+            The character used as the standard for determining the character width.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreePanel.#ctor">
+            <summary>
+            Constructs a <c>TreePanel</c> displaying an empty tree.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreePanel.#ctor(KansasStateUniversity.TreeViewer2.TreeDrawing)">
+            <summary>
+            Constructs a new <c>TreePanel</c> displaying the given <c>TreeDrawing</c> using
+            the default font.
+            </summary>
+            <param name="tree">The tree to be rendered.</param>
+            <exception cref="T:System.NullReferenceException">If tree is 
+            <c>null</c>.</exception>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreePanel.#ctor(KansasStateUniversity.TreeViewer2.TreeDrawing,System.Drawing.Font)">
+            <summary>
+            Constructs a new <c>TreePanel</c> displaying the given <c>TreeDrawing</c> using
+            the given <c>Font</c>.
+            </summary>
+            <param name="tree">The tree to be rendered.</param>
+            <param name="fnt">The font to use.</param>
+            <exception cref="T:System.NullReferenceException">If either argument is <c>null</c>.</exception>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreePanel.ScrollTo(System.Int32,System.Int32)">
+            <summary>
+            Scrolls the Panel so that its upper-left corner is at the given pixel coordinates
+            of the drawing.
+            </summary>
+            <param name="x">The horizontal offset in pixels.</param>
+            <param name="y">The vertical offset in pixels.</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreePanel.SetDrawingSize">
+            <summary>
+            Computes the size, in pixels, of the underlying drawing.  
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreePanel.CharacterWidth">
+            <summary>
+            Computes the width of the standard character.
+            </summary>
+            <returns>The width of the standard character.</returns>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreePanel.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Renders this component on the graphics context of the given <c>PaintEventArgs</c>.
+            </summary>
+            <param name="ea">Encapsulates the graphics context and clip to use for painting.</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreePanel.DoPaint(KansasStateUniversity.TreeViewer2.TreeDrawing,System.Drawing.Graphics,System.Drawing.PointF,System.Int32,System.Single)">
+            <summary>
+            Renders the <c>TreeDrawing</c> on the given graphics context.  
+            </summary>
+            <param name="t">The tree to be rendered.</param>
+            <param name="g">The graphics context on which to render t.</param>
+            <param name="origin">The coordinates within g of the upper left-hand corner of
+            the rectangle in which t should be rendered.</param>
+            <param name="charWidth">The width in pixels of the standard character.</param>
+            <param name="lineHeight">The height in pixels of a single line.</param>
+        </member>
+        <member name="T:KansasStateUniversity.TreeViewer2.TreeDrawing">
+            <summary>
+            An immutable high-level representation of a drawing of a tree. 
+            </summary>
+            <remarks>
+            <para>
+            This tree
+            representation contains a font-independent description of the size of
+            the drawing along with all the information necessary to draw the tree
+            on a given graphics context using a given font.  
+            </para>
+            <para>
+            A <c>TreeDrawing</c> can be constructed from an implementation of <c>ITree</c> 
+            and optionally an implementation of <c>IColorizer</c>.  No
+            attempt is made to detect cycles or overlapping subtrees; instead,
+            a parameter to the constructor specifies the maximum height of the tree
+            drawn.
+            </para>
+            <para>
+            A <c>TreePanel</c> containing a graphical representation
+            can be efficiently obtained from either the <c>GetDrawing()</c> or the 
+            <c>GetDrawing(Font)</c> method.  These methods return a new <c>TreePanel</c>
+            each time they are called, so they can be used in multiple containers.  These
+            components will all share the same <c>TreeDrawing</c>.
+            </para>
+            <para>
+            Empty trees are not drawn, but if a node contains both empty and nonempty
+            children, the horizontal padding that would surround a node is included
+            for empty children.  Consequently, in a binary tree, the line drawn from
+            a node to its left child always angles to the left, and the line drawn
+            from a node to its right child always angles to the right, even when the
+            other child is empty.  On the other hand, it may be more difficult to tell
+            which children may be empty in trees with other branching factors.
+            </para>
+            <para>
+            The children, each of which is a TreeDrawing, can be obtained using the 
+            <c>GetEnumerator()</c> method.  This method returns a
+            <c>System.Collections.IEnumerator</c> of the children.  This method allows a 
+            C# <c>foreach</c> construct to iterate through the children.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing._root">
+            <summary>
+            A string representation of the root of the tree.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing._color">
+            <summary>
+            The color with which to draw the root.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing._children">
+            <summary>
+            Drawings of the children of the root.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing._width">
+            <summary>
+            The width in characters of this drawing.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing._rootWidth">
+            <summary>
+            The width in characters of the root, including padding.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing._childrenWidth">
+            <summary>
+            The total width in characters of all children, including padding between
+            children.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing._height">
+            <summary>
+            The height in text lines of this drawing.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing.HorizontalSeparation">
+            <summary>
+            The width in characters of the horizontal separation between two nodes.
+            </summary>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeDrawing.VerticalSeparation">
+            <summary>
+            The height in lines of text of the vertical separation between parents
+            and children.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeDrawing.#ctor">
+            <summary>
+            Constructs a drawing of an empty tree.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeDrawing.#ctor(KansasStateUniversity.TreeViewer2.ITree,System.Int32)">
+            <summary>
+            Constructs a drawing of the given tree.  T
+            </summary>
+            <param name="tree">The tree to be drawn.</param>
+            <param name="maxHeight">The maximum height to display.  If this value is
+            negative, no nodes will be displayed.</param>
+            <remarks>
+            he foreground of the drawing 
+            is black.  The contents of nodes are obtained using the 
+            <c>ToString()</c> method (<see cref="M:System.Object.ToString"/>).  If the 
+            root of the tree is <c>null</c>, the string <c>"null"</c> is used.
+            </remarks>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeDrawing.#ctor(KansasStateUniversity.TreeViewer2.ITree,System.Int32,KansasStateUniversity.TreeViewer2.IColorizer)">
+            <summary>
+            Constructs a colorized drawing of the given tree.  
+            </summary>
+            <param name="tree">The tree to be drawn.  If <c>null</c>, no tree is 
+            drawn.</param>
+            <param name="maxHeight">The maximum height to display.  If this value is
+            negative, no nodes will be displayed.</param>
+            <param name="col">The <c>IColorizer</c> used to obtain the color of each node.
+            If <c>null</c>, each node is colored black.</param>
+            <remarks>
+            The contents of nodes
+            are obtained using the 
+            <c>ToString()</c> method (<see cref="M:System.Object.ToString"/>).  If the 
+            root of the tree is <c>null</c>, the string <c>"null"</c> is used.
+            </remarks>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeDrawing.GetEnumerator">
+            <summary>
+            Returns an <c>IEnumerator</c> giving the children, in order.  
+            </summary>
+            <returns>An <c>IEnumerator</c> giving the children, in order.</returns>
+            <remarks>
+            Each element in the <c>IEnumerator</c> is a <c>TreeDrawing</c>.
+            </remarks>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreeDrawing.Root">
+            <summary>
+            Gets the root of the tree.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeDrawing.computeSize">
+            <summary>
+            Computes the size fields for a nonempty tree.
+            </summary>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreeDrawing.Width">
+            <summary>
+            Gets the width of this tree in characters.
+            </summary>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreeDrawing.Height">
+            <summary>
+            Gets the height of this tree in text lines.
+            </summary>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreeDrawing.RootWidth">
+            <summary>
+            Gets the width of the root in characters.
+            </summary>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreeDrawing.ChildrenWidth">
+            <summary>
+            Gets the total width of the children in characters.
+            </summary>
+        </member>
+        <member name="P:KansasStateUniversity.TreeViewer2.TreeDrawing.RootColor">
+            <summary>
+            Gets the color of the root.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeDrawing.GetDrawing">
+            <summary>
+            Returns a <c>TreePanel</c> displaying this drawing using
+            <c>TreePanel.DefaultFont</c>.
+            </summary>
+            <returns>A <c>TreePanel</c> displaying this drawing using
+            <c>TreePanel.DefaultFont</c>.</returns>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeDrawing.GetDrawing(System.Drawing.Font)">
+            <summary>
+            Returns a <c>TreePanel</c> displaying this drawing using the 
+            given <c>Font</c>.
+            </summary>
+            <param name="fnt">The font used to display the tree.</param>
+            <returns>A <c>TreePanel</c> displaying this drawing using the 
+            given <c>Font</c>.</returns>
+            <exception cref="T:System.NullReferenceException">If fnt is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:KansasStateUniversity.TreeViewer2.TreeForm">
+            <summary>
+            A form for displaying a tree.  
+            </summary>
+            <remarks>
+            This class provides a straightforward means
+            for displaying a tree that implements <c>ITree</c>.
+            The form contains scroll bars to view the tree. Each constructor requires
+            a maximum height to be provided so that if the tree contains a cycle, infinite loops
+            will be avoided.  Once constructed, the <c>TreeDrawing</c> can
+            be displayed using its <c>Show</c> method. For use in debugging,
+            the <c>ShowDialog</c> method can be used in order to force the form to be drawn 
+            prior to a breakpoint.
+            </remarks>
+        </member>
+        <member name="F:KansasStateUniversity.TreeViewer2.TreeForm.uxTree">
+            <summary>
+            The control displaying the tree.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeForm.#ctor(KansasStateUniversity.TreeViewer2.ITree,System.Int32,KansasStateUniversity.TreeViewer2.IColorizer)">
+            <summary>
+            Contstructs a <c>TreeForm</c> displaying the given tree.  
+            </summary>
+            <param name="t">The tree to be displayed.</param>
+            <param name="maxHeight">The maximum height to be displayed.</param>
+            <param name="c">The <c>IColorizer</c> to colorize the tree.</param>
+            <exception cref="T:System.NullReferenceException">If t is null</exception>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeForm.#ctor(KansasStateUniversity.TreeViewer2.ITree,System.Int32)">
+            <summary>
+            Contstructs a <c>TreeForm</c> displaying the given tree.  
+            </summary>
+            <param name="t">The tree to be displayed.</param>
+            <param name="maxHeight">The maximum height to be displayed.</param>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeForm.#ctor(KansasStateUniversity.TreeViewer2.ITree,System.Int32,KansasStateUniversity.TreeViewer2.IColorizer,System.Drawing.Font)">
+            <summary>
+            Constructs a <c>TreeForm</c> displaying the given tree using the given 
+            <c>Font</c> and <c>IColorizer</c>. 
+            </summary>
+            <param name="t">The tree to be displayed.</param>
+            <param name="maxHeight">The maximum height to be displayed.</param>
+            <param name="c">The <c>IColorizer</c> to colorize the tree.</param>
+            <param name="fnt">The <c>Font</c> to use.</param>
+            <exception cref="T:System.NullReferenceException">If fnt is 
+            <c>null</c>.</exception>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeForm.#ctor(KansasStateUniversity.TreeViewer2.ITree,System.Int32,System.Drawing.Font)">
+            <summary>
+            Constructs a <c>TreeForm</c> displaying the given tree using the given 
+            <c>Font</c>.
+            </summary>
+            <param name="t">The tree to be displayed.</param>
+            <param name="maxHeight">The maximum height to be displayed.</param>
+            <param name="fnt">The Font to use.</param>
+            <exception cref="T:System.NullReferenceException">If fnt is 
+            <c>null</c>.</exception>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeForm.InitializeComponent">
+            <summary>
+            Initializes this GUI.
+            </summary>
+        </member>
+        <member name="M:KansasStateUniversity.TreeViewer2.TreeForm.TreeForm_FontChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the event signaled with this <c>TreeForm</c>'s <c>Font</c> is changed.
+            </summary>
+            <param name="sender">The object whose Font was changed.</param>
+            <param name="e">The event arguments (unused).</param>
+        </member>
+    </members>
+</doc>
