@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Children property" Url="html/d5346c0f-b884-4fc8-9119-308e45162283.htm" />
+  <HelpKINode Title="ChildrenWidth property" Url="html/a084894f-b75e-b3da-d213-067af4d54a3e.htm" />
+  <HelpKINode Title="DefaultFont property" Url="html/252b2591-c4ae-cdca-925d-baf6e0aac97e.htm" />
+  <HelpKINode Title="Dispose method" Url="html/1864fa9e-fd84-7a53-d779-07fa1080c0dc.htm" />
+  <HelpKINode Title="Drawing property">
+    <HelpKINode Title="ScrollingTreePanel.Drawing Property " Url="html/0cd7bc21-21a9-8600-a628-aaaa14ea0b38.htm" />
+    <HelpKINode Title="TreePanel.Drawing Property " Url="html/d3c4d147-f3f7-5e24-1f0b-9355102360ec.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DrawingHeight property" Url="html/3ed31746-daf4-4280-e1e6-602875df7597.htm" />
+  <HelpKINode Title="DrawingSizeChanged event" Url="html/83553c60-bc54-00ea-7696-1ab3bdc72aaa.htm" />
+  <HelpKINode Title="DrawingWidth property" Url="html/5e97456f-4626-7241-5762-a2ded23ae1e1.htm" />
+  <HelpKINode Title="Font property" Url="html/409abe5c-a20d-d216-e4d8-5f49564c0f16.htm" />
+  <HelpKINode Title="GetColor method" Url="html/553b1d84-2e5d-2a3c-5cce-b7addbb4797f.htm" />
+  <HelpKINode Title="GetDrawing method" Url="html/36396d4a-2d2a-48bd-095c-041feda093ff.htm" />
+  <HelpKINode Title="GetEnumerator method" Url="html/f243cc03-4dbf-3c99-a314-0ffae0216afb.htm" />
+  <HelpKINode Title="Height property" Url="html/d78c0743-36ac-7c5f-f180-e3b461804d66.htm" />
+  <HelpKINode Title="HorizontalSeparation field" Url="html/5675d4ab-fda9-7b8d-cf55-5ebef10d035e.htm" />
+  <HelpKINode Title="IColorizer interface">
+    <HelpKINode Title="IColorizer Interface" Url="html/662d9a4f-756c-5e6d-e28b-81c1cf584097.htm" />
+    <HelpKINode Title="methods" Url="html/fce0549b-0ef3-3b5a-7884-7ab7e2912220.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IColorizer.GetColor method" Url="html/553b1d84-2e5d-2a3c-5cce-b7addbb4797f.htm" />
+  <HelpKINode Title="IsEmpty property" Url="html/197381cc-c128-e87c-923f-5d838ff0c1b0.htm" />
+  <HelpKINode Title="ITree interface">
+    <HelpKINode Title="ITree Interface" Url="html/68d85729-02b8-db78-4416-945a0e45acfb.htm" />
+    <HelpKINode Title="properties" Url="html/4f05d51a-9b37-8d4b-7cde-9210529455b3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ITree.Children property" Url="html/d5346c0f-b884-4fc8-9119-308e45162283.htm" />
+  <HelpKINode Title="ITree.IsEmpty property" Url="html/197381cc-c128-e87c-923f-5d838ff0c1b0.htm" />
+  <HelpKINode Title="ITree.Root property" Url="html/a4a6c241-8897-9b88-5236-ff7659cc10b7.htm" />
+  <HelpKINode Title="KansasStateUniversity.TreeViewer2 namespace" Url="html/4feb08d4-45a9-d5a7-f8c5-964962c586e5.htm" />
+  <HelpKINode Title="KansasStateUniversity.TreeViewer2.IColorizer interface" Url="html/662d9a4f-756c-5e6d-e28b-81c1cf584097.htm" />
+  <HelpKINode Title="KansasStateUniversity.TreeViewer2.ITree interface" Url="html/68d85729-02b8-db78-4416-945a0e45acfb.htm" />
+  <HelpKINode Title="KansasStateUniversity.TreeViewer2.ScrollingTreePanel class" Url="html/2edfdd3e-a623-d488-e863-c48c30bc2768.htm" />
+  <HelpKINode Title="KansasStateUniversity.TreeViewer2.TreeDrawing class" Url="html/318fe5cb-7ed3-d88a-515f-82753b6dbf3e.htm" />
+  <HelpKINode Title="KansasStateUniversity.TreeViewer2.TreeForm class" Url="html/e15ea583-4b1e-7a0b-ad9c-fc56983ca79b.htm" />
+  <HelpKINode Title="KansasStateUniversity.TreeViewer2.TreePanel class" Url="html/bd639a4b-3c76-b534-871f-8c730bacebaa.htm" />
+  <HelpKINode Title="OnPaint method" Url="html/82e2b36f-be0b-637e-c0c4-ee6ee2b0701f.htm" />
+  <HelpKINode Title="Root property">
+    <HelpKINode Title="ITree.Root Property " Url="html/a4a6c241-8897-9b88-5236-ff7659cc10b7.htm" />
+    <HelpKINode Title="TreeDrawing.Root Property " Url="html/89230fe0-53da-857e-97e4-73a9fda21510.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RootColor property" Url="html/8e777cc6-aa4f-b176-46e3-ae21136f60ce.htm" />
+  <HelpKINode Title="RootWidth property" Url="html/e60d5d2e-15d9-da53-3e57-9ff45cc1fb2a.htm" />
+  <HelpKINode Title="ScrollingTreePanel class">
+    <HelpKINode Title="ScrollingTreePanel Class" Url="html/2edfdd3e-a623-d488-e863-c48c30bc2768.htm" />
+    <HelpKINode Title="constructor" Url="html/cbb4546d-adab-644d-ba27-41a65d2d1469.htm" />
+    <HelpKINode Title="events" Url="html/a4d46161-67e9-ee87-1fd3-b3682cedee2f.htm" />
+    <HelpKINode Title="methods" Url="html/efe61d16-9419-efa9-09d9-bf304dd1dd8f.htm" />
+    <HelpKINode Title="properties" Url="html/1d3a9591-2d76-79f3-b18f-cf57a9439d0f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScrollingTreePanel.Dispose method" Url="html/1864fa9e-fd84-7a53-d779-07fa1080c0dc.htm" />
+  <HelpKINode Title="ScrollingTreePanel.Drawing property" Url="html/0cd7bc21-21a9-8600-a628-aaaa14ea0b38.htm" />
+  <HelpKINode Title="ScrollingTreePanel.ScrollingTreePanel constructor" Url="html/cbb4546d-adab-644d-ba27-41a65d2d1469.htm" />
+  <HelpKINode Title="ScrollTo method" Url="html/7aeef7e2-c567-f7a8-9718-bb43865cc089.htm" />
+  <HelpKINode Title="StandardCharacter field" Url="html/07201c45-1fcb-0dab-cdd9-fa3daec8a97e.htm" />
+  <HelpKINode Title="TreeDrawing class">
+    <HelpKINode Title="TreeDrawing Class" Url="html/318fe5cb-7ed3-d88a-515f-82753b6dbf3e.htm" />
+    <HelpKINode Title="constructor" Url="html/176cba59-ddc9-6c7a-9e79-cfa7f95b6188.htm" />
+    <HelpKINode Title="fields" Url="html/61114571-3a3a-5f47-ff5b-dbbfa74dc377.htm" />
+    <HelpKINode Title="methods" Url="html/1612c2e4-6e8f-e628-3c5a-4877e1c21c53.htm" />
+    <HelpKINode Title="properties" Url="html/af029a14-a7a6-c772-dac2-9a084ee4dfc0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TreeDrawing.ChildrenWidth property" Url="html/a084894f-b75e-b3da-d213-067af4d54a3e.htm" />
+  <HelpKINode Title="TreeDrawing.GetDrawing method" Url="html/36396d4a-2d2a-48bd-095c-041feda093ff.htm" />
+  <HelpKINode Title="TreeDrawing.GetEnumerator method" Url="html/f243cc03-4dbf-3c99-a314-0ffae0216afb.htm" />
+  <HelpKINode Title="TreeDrawing.Height property" Url="html/d78c0743-36ac-7c5f-f180-e3b461804d66.htm" />
+  <HelpKINode Title="TreeDrawing.HorizontalSeparation field" Url="html/5675d4ab-fda9-7b8d-cf55-5ebef10d035e.htm" />
+  <HelpKINode Title="TreeDrawing.Root property" Url="html/89230fe0-53da-857e-97e4-73a9fda21510.htm" />
+  <HelpKINode Title="TreeDrawing.RootColor property" Url="html/8e777cc6-aa4f-b176-46e3-ae21136f60ce.htm" />
+  <HelpKINode Title="TreeDrawing.RootWidth property" Url="html/e60d5d2e-15d9-da53-3e57-9ff45cc1fb2a.htm" />
+  <HelpKINode Title="TreeDrawing.TreeDrawing constructor" Url="html/176cba59-ddc9-6c7a-9e79-cfa7f95b6188.htm" />
+  <HelpKINode Title="TreeDrawing.VerticalSeparation field" Url="html/602262e4-4489-a7bf-bbb3-064c6b2d6170.htm" />
+  <HelpKINode Title="TreeDrawing.Width property" Url="html/7125e6e0-482d-cc86-289c-28cd428bdd10.htm" />
+  <HelpKINode Title="TreeForm class">
+    <HelpKINode Title="TreeForm Class" Url="html/e15ea583-4b1e-7a0b-ad9c-fc56983ca79b.htm" />
+    <HelpKINode Title="constructor" Url="html/0cc580b8-138d-2975-9f82-bd6506c68e90.htm" />
+    <HelpKINode Title="events" Url="html/dee6a57a-06f8-f7f4-dd6f-22783bf80b60.htm" />
+    <HelpKINode Title="methods" Url="html/3dc7b6f1-eff4-1b21-c0fc-b8f0f587d974.htm" />
+    <HelpKINode Title="properties" Url="html/cb0247da-6cce-3c77-c688-61a1d6995943.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TreeForm.TreeForm constructor" Url="html/0cc580b8-138d-2975-9f82-bd6506c68e90.htm" />
+  <HelpKINode Title="TreePanel class">
+    <HelpKINode Title="TreePanel Class" Url="html/bd639a4b-3c76-b534-871f-8c730bacebaa.htm" />
+    <HelpKINode Title="constructor" Url="html/f4e38e29-7897-946f-c0b4-460ef18368c0.htm" />
+    <HelpKINode Title="events" Url="html/e8de3773-a6e7-2805-99e1-56b252c45aae.htm" />
+    <HelpKINode Title="fields" Url="html/c97cd83e-a84f-8805-81d5-4ee33f718644.htm" />
+    <HelpKINode Title="methods" Url="html/d8fca701-dbe5-2525-da1e-b00a51774ebd.htm" />
+    <HelpKINode Title="properties" Url="html/e108fe96-f309-c22f-b001-79546f310aec.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TreePanel.DefaultFont property" Url="html/252b2591-c4ae-cdca-925d-baf6e0aac97e.htm" />
+  <HelpKINode Title="TreePanel.Drawing property" Url="html/d3c4d147-f3f7-5e24-1f0b-9355102360ec.htm" />
+  <HelpKINode Title="TreePanel.DrawingHeight property" Url="html/3ed31746-daf4-4280-e1e6-602875df7597.htm" />
+  <HelpKINode Title="TreePanel.DrawingSizeChanged event" Url="html/83553c60-bc54-00ea-7696-1ab3bdc72aaa.htm" />
+  <HelpKINode Title="TreePanel.DrawingWidth property" Url="html/5e97456f-4626-7241-5762-a2ded23ae1e1.htm" />
+  <HelpKINode Title="TreePanel.Font property" Url="html/409abe5c-a20d-d216-e4d8-5f49564c0f16.htm" />
+  <HelpKINode Title="TreePanel.OnPaint method" Url="html/82e2b36f-be0b-637e-c0c4-ee6ee2b0701f.htm" />
+  <HelpKINode Title="TreePanel.ScrollTo method" Url="html/7aeef7e2-c567-f7a8-9718-bb43865cc089.htm" />
+  <HelpKINode Title="TreePanel.StandardCharacter field" Url="html/07201c45-1fcb-0dab-cdd9-fa3daec8a97e.htm" />
+  <HelpKINode Title="TreePanel.TreePanel constructor" Url="html/f4e38e29-7897-946f-c0b4-460ef18368c0.htm" />
+  <HelpKINode Title="VerticalSeparation field" Url="html/602262e4-4489-a7bf-bbb3-064c6b2d6170.htm" />
+  <HelpKINode Title="Width property" Url="html/7125e6e0-482d-cc86-289c-28cd428bdd10.htm" />
+</HelpKI>

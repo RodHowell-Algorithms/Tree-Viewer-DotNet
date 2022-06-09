@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="5e6fa48f-2e72-469b-94fe-d691659b0b78" Title="KansasStateUniversity.TreeViewer2" Url="html/4feb08d4-45a9-d5a7-f8c5-964962c586e5.htm">
+    <HelpTOCNode Id="2d96ce4e-b3d9-44d3-9a68-a642197c74b2" Title="IColorizer Interface" Url="html/662d9a4f-756c-5e6d-e28b-81c1cf584097.htm">
+      <HelpTOCNode Id="3bb7a054-a3fa-45ba-8dd4-8f22c73afb29" Title="IColorizer Methods" Url="html/fce0549b-0ef3-3b5a-7884-7ab7e2912220.htm">
+        <HelpTOCNode Title="GetColor Method " Url="html/553b1d84-2e5d-2a3c-5cce-b7addbb4797f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="009feace-12e1-4e97-b2ee-8fee8ff93b7e" Title="ITree Interface" Url="html/68d85729-02b8-db78-4416-945a0e45acfb.htm">
+      <HelpTOCNode Id="53e4f953-3f0c-4c6b-ac37-8a193c4952d0" Title="ITree Properties" Url="html/4f05d51a-9b37-8d4b-7cde-9210529455b3.htm">
+        <HelpTOCNode Title="Children Property " Url="html/d5346c0f-b884-4fc8-9119-308e45162283.htm" />
+        <HelpTOCNode Title="IsEmpty Property " Url="html/197381cc-c128-e87c-923f-5d838ff0c1b0.htm" />
+        <HelpTOCNode Title="Root Property " Url="html/a4a6c241-8897-9b88-5236-ff7659cc10b7.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b69e30dd-0cee-4cf7-a812-5d215acda9e5" Title="ScrollingTreePanel Class" Url="html/2edfdd3e-a623-d488-e863-c48c30bc2768.htm">
+      <HelpTOCNode Id="d5001e2b-3a66-47b1-8e71-83fbae92c3ec" Title="ScrollingTreePanel Constructor " Url="html/cbb4546d-adab-644d-ba27-41a65d2d1469.htm">
+        <HelpTOCNode Title="ScrollingTreePanel Constructor " Url="html/8de6122f-d35b-d68e-7165-d2c6a6e6dbb1.htm" />
+        <HelpTOCNode Title="ScrollingTreePanel Constructor (TreeDrawing)" Url="html/ef622cd5-22ff-bbd7-485c-04ab2cc35945.htm" />
+        <HelpTOCNode Title="ScrollingTreePanel Constructor (TreeDrawing, Font)" Url="html/7000db41-15e9-9a02-94cf-d8f76aa68213.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1fbd282a-41a1-458b-929e-13e44a975a3e" Title="ScrollingTreePanel Properties" Url="html/1d3a9591-2d76-79f3-b18f-cf57a9439d0f.htm">
+        <HelpTOCNode Title="Drawing Property " Url="html/0cd7bc21-21a9-8600-a628-aaaa14ea0b38.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5cea23e7-1811-4aec-bbea-1b309b034e0e" Title="ScrollingTreePanel Methods" Url="html/efe61d16-9419-efa9-09d9-bf304dd1dd8f.htm">
+        <HelpTOCNode Id="555b92a0-61cb-41ec-83cd-34bb0bf9389b" Title="Dispose Method " Url="html/1864fa9e-fd84-7a53-d779-07fa1080c0dc.htm">
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/ec002dcf-db06-5a35-7552-15e9d6d81e5a.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="ScrollingTreePanel Events" Url="html/a4d46161-67e9-ee87-1fd3-b3682cedee2f.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="0e2ccf6f-8636-40f5-87c7-5f0bd4ab55ec" Title="TreeDrawing Class" Url="html/318fe5cb-7ed3-d88a-515f-82753b6dbf3e.htm">
+      <HelpTOCNode Id="f6d1b30f-b69b-4bfb-a385-bdb49049d832" Title="TreeDrawing Constructor " Url="html/176cba59-ddc9-6c7a-9e79-cfa7f95b6188.htm">
+        <HelpTOCNode Title="TreeDrawing Constructor " Url="html/00fa7c12-2f95-05b7-51b3-4d15745a789b.htm" />
+        <HelpTOCNode Title="TreeDrawing Constructor (ITree, Int32)" Url="html/0f70cc46-022b-fbe8-5cbd-3a042086725b.htm" />
+        <HelpTOCNode Title="TreeDrawing Constructor (ITree, Int32, IColorizer)" Url="html/0a0680b2-a276-67d6-b5f8-0d1b05f07eec.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0300ca38-997d-4868-a9fd-d4c0e31d7f04" Title="TreeDrawing Properties" Url="html/af029a14-a7a6-c772-dac2-9a084ee4dfc0.htm">
+        <HelpTOCNode Title="ChildrenWidth Property " Url="html/a084894f-b75e-b3da-d213-067af4d54a3e.htm" />
+        <HelpTOCNode Title="Height Property " Url="html/d78c0743-36ac-7c5f-f180-e3b461804d66.htm" />
+        <HelpTOCNode Title="Root Property " Url="html/89230fe0-53da-857e-97e4-73a9fda21510.htm" />
+        <HelpTOCNode Title="RootColor Property " Url="html/8e777cc6-aa4f-b176-46e3-ae21136f60ce.htm" />
+        <HelpTOCNode Title="RootWidth Property " Url="html/e60d5d2e-15d9-da53-3e57-9ff45cc1fb2a.htm" />
+        <HelpTOCNode Title="Width Property " Url="html/7125e6e0-482d-cc86-289c-28cd428bdd10.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a9a74f50-4ed1-4fb8-9ad7-be97da8f40cb" Title="TreeDrawing Methods" Url="html/1612c2e4-6e8f-e628-3c5a-4877e1c21c53.htm">
+        <HelpTOCNode Id="e6e825c1-e637-49db-a74e-23422a029ae0" Title="GetDrawing Method " Url="html/36396d4a-2d2a-48bd-095c-041feda093ff.htm">
+          <HelpTOCNode Title="GetDrawing Method " Url="html/d0fb9af2-776f-c528-e55c-389ab156e414.htm" />
+          <HelpTOCNode Title="GetDrawing Method (Font)" Url="html/e558b9a2-a96b-8917-14fb-52821c38f34e.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetEnumerator Method " Url="html/f243cc03-4dbf-3c99-a314-0ffae0216afb.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4430666b-01a4-4036-92f8-4259178cd494" Title="TreeDrawing Fields" Url="html/61114571-3a3a-5f47-ff5b-dbbfa74dc377.htm">
+        <HelpTOCNode Title="HorizontalSeparation Field" Url="html/5675d4ab-fda9-7b8d-cf55-5ebef10d035e.htm" />
+        <HelpTOCNode Title="VerticalSeparation Field" Url="html/602262e4-4489-a7bf-bbb3-064c6b2d6170.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fed31819-2b15-458b-9f34-78d0b5c9bce6" Title="TreeForm Class" Url="html/e15ea583-4b1e-7a0b-ad9c-fc56983ca79b.htm">
+      <HelpTOCNode Id="3f9792da-8e44-4e01-8f34-f0709dbabb42" Title="TreeForm Constructor " Url="html/0cc580b8-138d-2975-9f82-bd6506c68e90.htm">
+        <HelpTOCNode Title="TreeForm Constructor (ITree, Int32)" Url="html/3f6c2f34-02fc-4b8f-eea4-e9652dbdd121.htm" />
+        <HelpTOCNode Title="TreeForm Constructor (ITree, Int32, IColorizer)" Url="html/f64a18f7-ae8e-9ebd-84cc-4d72e400cd80.htm" />
+        <HelpTOCNode Title="TreeForm Constructor (ITree, Int32, Font)" Url="html/7d1054cd-8436-6299-d702-fd3c959b9577.htm" />
+        <HelpTOCNode Title="TreeForm Constructor (ITree, Int32, IColorizer, Font)" Url="html/543a308b-c4be-0a58-3ed6-16d58647119b.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="TreeForm Properties" Url="html/cb0247da-6cce-3c77-c688-61a1d6995943.htm" />
+      <HelpTOCNode Title="TreeForm Methods" Url="html/3dc7b6f1-eff4-1b21-c0fc-b8f0f587d974.htm" />
+      <HelpTOCNode Title="TreeForm Events" Url="html/dee6a57a-06f8-f7f4-dd6f-22783bf80b60.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c1353bf7-97aa-4d5c-9726-8391669b801e" Title="TreePanel Class" Url="html/bd639a4b-3c76-b534-871f-8c730bacebaa.htm">
+      <HelpTOCNode Id="70d51fb0-6bbd-4459-af44-0b3e5f0cf5c0" Title="TreePanel Constructor " Url="html/f4e38e29-7897-946f-c0b4-460ef18368c0.htm">
+        <HelpTOCNode Title="TreePanel Constructor " Url="html/37800aec-4a00-ff70-fe41-778dbe00f12c.htm" />
+        <HelpTOCNode Title="TreePanel Constructor (TreeDrawing)" Url="html/d45adbe4-16de-1187-6dfa-1de67cbbe46a.htm" />
+        <HelpTOCNode Title="TreePanel Constructor (TreeDrawing, Font)" Url="html/5ee10780-9dad-67c6-fca0-360a448135a3.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7209cb95-4dbb-49de-b34e-2758f6e91d36" Title="TreePanel Properties" Url="html/e108fe96-f309-c22f-b001-79546f310aec.htm">
+        <HelpTOCNode Title="DefaultFont Property " Url="html/252b2591-c4ae-cdca-925d-baf6e0aac97e.htm" />
+        <HelpTOCNode Title="Drawing Property " Url="html/d3c4d147-f3f7-5e24-1f0b-9355102360ec.htm" />
+        <HelpTOCNode Title="DrawingHeight Property " Url="html/3ed31746-daf4-4280-e1e6-602875df7597.htm" />
+        <HelpTOCNode Title="DrawingWidth Property " Url="html/5e97456f-4626-7241-5762-a2ded23ae1e1.htm" />
+        <HelpTOCNode Title="Font Property " Url="html/409abe5c-a20d-d216-e4d8-5f49564c0f16.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="06b4511d-2e0e-4a2c-9efc-75442a732b14" Title="TreePanel Methods" Url="html/d8fca701-dbe5-2525-da1e-b00a51774ebd.htm">
+        <HelpTOCNode Title="OnPaint Method " Url="html/82e2b36f-be0b-637e-c0c4-ee6ee2b0701f.htm" />
+        <HelpTOCNode Title="ScrollTo Method " Url="html/7aeef7e2-c567-f7a8-9718-bb43865cc089.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="eb9a2bd2-227d-4a8d-9b50-83311f0e80a5" Title="TreePanel Events" Url="html/e8de3773-a6e7-2805-99e1-56b252c45aae.htm">
+        <HelpTOCNode Title="DrawingSizeChanged Event" Url="html/83553c60-bc54-00ea-7696-1ab3bdc72aaa.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a60e56e3-66bc-4d83-88f1-bbd663e740c4" Title="TreePanel Fields" Url="html/c97cd83e-a84f-8805-81d5-4ee33f718644.htm">
+        <HelpTOCNode Title="StandardCharacter Field" Url="html/07201c45-1fcb-0dab-cdd9-fa3daec8a97e.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

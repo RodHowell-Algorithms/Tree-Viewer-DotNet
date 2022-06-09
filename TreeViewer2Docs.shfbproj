@@ -18,16 +18,16 @@
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>Documentation</HtmlHelpName>
     <Language>en-US</Language>
-    <HelpFileFormat>Markdown</HelpFileFormat>
+    <HelpFileFormat>Website</HelpFileFormat>
     <SyntaxFilters>Standard</SyntaxFilters>
-    <PresentationStyle>Markdown</PresentationStyle>
+    <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <IndentHtml>False</IndentHtml>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
-    <HelpTitle>KansasStateUniversity.TreeViewer2</HelpTitle>
+    <HelpTitle>Tree Viewer</HelpTitle>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
     <NamingMethod>Guid</NamingMethod>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
@@ -39,22 +39,21 @@
     <FeedbackEMailAddress>rhowell%40ksu.edu</FeedbackEMailAddress>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <DocumentationSources>
-      <DocumentationSource sourceFile="KansasStateUniversity.TreeViewer2.dll" />
-    </DocumentationSources>
+      <DocumentationSource sourceFile="KansasStateUniversity.TreeViewer\bin\Release\KansasStateUniversity.TreeViewer2.xml" />
+<DocumentationSource sourceFile="KansasStateUniversity.TreeViewer\bin\Release\KansasStateUniversity.TreeViewer2.dll" /></DocumentationSources>
     <ProjectSummary>
     </ProjectSummary>
     <NamespaceSummaries>
-      <NamespaceSummaryItem name="KansasStateUniversity.TreeViewer2" isDocumented="True">KansasStateUniversity.TreeViewer2 is a library for building visualizations of trees.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="(global)" isDocumented="False">&lt;summary&gt;
-KansasStateUniversity.TreeViewer2 is a library for building visualizations of trees.
-&lt;/summary&gt;
-&lt;remarks&gt;
-This library is a revision of KansasStateUniversity.TreeViewer, which contained some members
-that were not consistent with the .NET style. A developer may define a tree structure which 
-implements &lt;c&gt;ITree&lt;/c&gt;. If colored nodes are desired, a class implementing &lt;c&gt;IColorizer&lt;/c&gt;
-may also be defined. A drawing of the tree can then be created using the &lt;c&gt;TreeDrawing&lt;/c&gt;, 
-&lt;c&gt;ScrollingTreePanel&lt;/c&gt;, and/or &lt;c&gt;TreeForm&lt;/c&gt; classes.
-&lt;/remarks&gt;</NamespaceSummaryItem></NamespaceSummaries>
+    </NamespaceSummaries>
+    <CatalogProductId>VS</CatalogProductId>
+    <CatalogVersion>100</CatalogVersion>
+    <VendorName>Rod Howell</VendorName>
+    <ProductTitle>Tree Viewer</ProductTitle>
+    <TocOrder>-1</TocOrder>
+    <TocParentId>-1</TocParentId>
+    <TocParentVersion>100</TocParentVersion>
+    <TopicVersion>100</TopicVersion>
+    <MSHelpViewerSdkLinkType>Msdn</MSHelpViewerSdkLinkType>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
